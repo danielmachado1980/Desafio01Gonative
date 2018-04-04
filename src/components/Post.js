@@ -7,8 +7,10 @@ import {
 
 const Post = (props) => (
     <View style={styles.container}>
-      <Text style={styles.textTitle}>Post1</Text>
-      <Text style={styles.textAuthor}>Post2</Text>
+      <View>
+        <Text style={styles.textTitle}>Post1</Text>
+        <Text style={styles.textAuthor}>Post2</Text>
+      </View>
       <Text style={styles.textContent}>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos</Text>
     </View>
 )
@@ -27,14 +29,12 @@ const styles = StyleSheet.create({
   textAuthor: {
     fontSize: 10,
     color: '#999999',
-    marginBottom: 10,
   },
   textContent: {
     fontSize: 10,
     color: '#666666',
     borderTopWidth: 1,
     borderTopColor: '#EEEEEE',
-    marginTop: 10,
   }
 })
 
