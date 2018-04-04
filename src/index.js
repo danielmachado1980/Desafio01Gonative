@@ -7,57 +7,26 @@ import {
   ScrollView
 } from 'react-native';
 
+import Post from './components/Post';
+
 export default class App extends Component {
   render() {
     return (
-      <View>
-        <Text>GoNative App</Text>
-        <ScrollView >
-          <Text style={styles.welcome}>
-            Welcome to RN Challenge One!
-          </Text>
-          <Text style={styles.welcome}>
-            Welcome to RN Challenge One!
-          </Text>
-          <Text style={styles.welcome}>
-            Welcome to RN Challenge One!
-          </Text>
-          <Text style={styles.welcome}>
-            Welcome to RN Challenge One!
-          </Text>
-          <Text style={styles.welcome}>
-            Welcome to RN Challenge One!
-          </Text>
-          <Text style={styles.welcome}>
-            Welcome to RN Challenge One!
-          </Text>
-          <Text style={styles.welcome}>
-            Welcome to RN Challenge One!
-          </Text>
-          <Text style={styles.welcome}>
-            Welcome to RN Challenge One!
-          </Text>
-          <Text style={styles.welcome}>
-            Welcome to RN Challenge One!
-          </Text>
-          <Text style={styles.welcome}>
-            Welcome to RN Challenge One!
-          </Text>
-          <Text style={styles.welcome}>
-            Welcome to RN Challenge One!
-          </Text>
-          <Text style={styles.welcome}>
-            Welcome to RN Challenge One!
-          </Text>
-          <Text style={styles.welcome}>
-            Welcome to RN Challenge One!
-          </Text>
-          <Text style={styles.welcome}>
-            Welcome to RN Challenge One!
-          </Text>
-          <Text style={styles.welcome}>
-            Welcome to RN Challenge One!
-          </Text>
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <Text style={styles.text}>GoNative App</Text>
+        </View>
+        <ScrollView style={styles.scroll}>
+          <Post>GoNative App</Post>
+          <Post>GoNative App</Post>
+          <Post>GoNative App</Post>
+          <Post>GoNative App</Post>
+          <Post>GoNative App</Post>
+          <Post>GoNative App</Post>
+          <Post>GoNative App</Post>
+          <Post>GoNative App</Post>
+          <Post>GoNative App</Post>
+          <Post>GoNative App</Post>
         </ScrollView>
       </View>
     );
@@ -67,18 +36,24 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
   },
   welcome: {
+    backgroundColor: '#FFFFee',
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
   },
-  instructions: {
+  header: {
+    backgroundColor: '#FFFFFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: (Platform.OS === 'ios') ? 64 : 54,
+    marginTop: (Platform.OS === 'ios') ? 20 : 0,
+  },
+  scroll: {
+    backgroundColor: '#EE7777',
+  },
+  text: {
+    fontSize: 20,
     textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  }
 });
