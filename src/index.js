@@ -7,26 +7,31 @@ import {
   ScrollView
 } from 'react-native';
 
+import './config/ReactotronConfig';
+
 import Post from './components/Post';
 
 export default class App extends Component {
+  state = {
+    posts: [
+      { id: 1, title: 'Título 1', author: 'Daniel G. Machado', content: 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos.'},
+      { id: 2, title: 'Título 2', author: 'Daniel G. Machado', content: 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos.'},
+      { id: 3, title: 'Título 3', author: 'Daniel G. Machado', content: 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos.'},
+    ],
+  };
+
+  componentDidMount(){
+    //console.tron.log('Testando debug...');
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.text}>GoNative App</Text>
+          <Text style={styles.textHeader}>GoNative App</Text>
         </View>
         <ScrollView style={styles.scroll}>
-          <Post>GoNative App</Post>
-          <Post>GoNative App</Post>
-          <Post>GoNative App</Post>
-          <Post>GoNative App</Post>
-          <Post>GoNative App</Post>
-          <Post>GoNative App</Post>
-          <Post>GoNative App</Post>
-          <Post>GoNative App</Post>
-          <Post>GoNative App</Post>
-          <Post>GoNative App</Post>
+          { this.state.posts.map (post => <Post key={post.id} post={post} ></Post> )}
         </ScrollView>
       </View>
     );
@@ -36,11 +41,6 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  welcome: {
-    backgroundColor: '#FFFFee',
-    fontSize: 20,
-    textAlign: 'center',
   },
   header: {
     backgroundColor: '#FFFFFF',
