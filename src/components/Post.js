@@ -5,22 +5,26 @@ import {
   View,
 } from 'react-native';
 
-const Post = (props) => (
+const Post = ({post}) => (
     <View style={styles.container}>
-      <View>
-        <Text style={styles.textTitle}>Post1</Text>
-        <Text style={styles.textAuthor}>Post2</Text>
+      <View style={styles.border}>
+        <Text style={styles.textTitle}>{post.title}</Text>
+        <Text style={styles.textAuthor}>{post.author}</Text>
       </View>
-      <Text style={styles.textContent}>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos</Text>
-    </View>
+      <Text style={styles.textContent}>{post.content}</Text>
+  </View>
 )
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#FFFFFF',
     padding: 20,
-    margin: 20,
     borderRadius: 5,
+    marginBottom: 20,
+  },
+  border: {
+    borderBottomWidth: 1,
+    borderBottomColor: '#EEEEEE',
   },
   textTitle: {
     fontSize: 20,
@@ -33,8 +37,12 @@ const styles = StyleSheet.create({
   textContent: {
     fontSize: 10,
     color: '#666666',
+<<<<<<< HEAD
     borderTopWidth: 1,
     borderTopColor: '#EEEEEE',
+=======
+    marginTop: 10,
+>>>>>>> 6dfc10c065c8a4080d8ea2de7fbdbf73772765a8
   }
 })
 

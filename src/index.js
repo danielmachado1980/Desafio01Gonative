@@ -51,9 +51,10 @@ const styles = StyleSheet.create({
   },
   scroll: {
     backgroundColor: '#EE7777',
+    padding: 20,
   },
-  text: {
+  textHeader: {
     fontSize: 20,
-    textAlign: 'center',
+    color: '#333333',
   }
 });
