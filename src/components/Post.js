@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     padding: 20,
     borderRadius: 5,
-    marginBottom: 20,
+    marginTop: 20,
   },
   border: {
     borderBottomWidth: 1,
@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
   textAuthor: {
     fontSize: 10,
     color: '#999999',
+    marginBottom: 10,
   },
   textContent: {
     fontSize: 10,
