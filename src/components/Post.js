@@ -37,12 +37,7 @@ const styles = StyleSheet.create({
   textContent: {
     fontSize: 10,
     color: '#666666',
-<<<<<<< HEAD
-    borderTopWidth: 1,
-    borderTopColor: '#EEEEEE',
-=======
     marginTop: 10,
->>>>>>> 6dfc10c065c8a4080d8ea2de7fbdbf73772765a8
   }
 })
 
