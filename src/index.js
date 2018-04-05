@@ -1,27 +1,33 @@
-import React, { Component } from 'react';//
+import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet,
   Text,
   View,
-  ScrollView
+  ScrollView,
 } from 'react-native';
 
-import './config/ReactotronConfig';
-import './config/DevToolsConfig';
+import 'config/ReactotronConfig';
+import 'config/DevToolsConfig';
 
-import Post from './components/Post';
+import Post from 'components/Post';
 
 export default class App extends Component {
   state = {
     posts: [
-      { id: 1, title: 'Título 1', author: 'Daniel G. Machado', content: 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos.'},
-      { id: 2, title: 'Título 2', author: 'Daniel G. Machado', content: 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos.'},
-      { id: 3, title: 'Título 3', author: 'Daniel G. Machado', content: 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos.'},
+      {
+        id: 1, title: 'Título 1', author: 'Daniel G. Machado', content: 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos.',
+      },
+      {
+        id: 2, title: 'Título 2', author: 'Daniel G. Machado', content: 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos.',
+      },
+      {
+        id: 3, title: 'Título 3', author: 'Daniel G. Machado', content: 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos.',
+      },
     ],
   };
 
-  componentDidMount(){
+  componentDidMount() {
     console.tron.log('Testando debug... Reactotron de novo!');
   }
 
@@ -33,7 +39,7 @@ export default class App extends Component {
         </View>
         <ScrollView style={styles.scroll}>
           <View style={styles.paddingRound}>
-            { this.state.posts.map (post => <Post key={post.id} post={post} ></Post> )}
+            { this.state.posts.map(post => <Post key={post.id} post={post} />)}
           </View>
         </ScrollView>
       </View>
@@ -62,5 +68,5 @@ const styles = StyleSheet.create({
   textHeader: {
     fontSize: 20,
     color: '#333333',
-  }
+  },
 });
