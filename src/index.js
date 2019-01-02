@@ -28,14 +28,14 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    console.tron.log('Testando debug... Reactotron de novo!');
+    console.tron.log('Testando debug... Reactotron de novo!!!');
   }
 
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.textHeader}>GoNative App</Text>
+          <Text style={styles.textHeader}>GoNative App.</Text>
         </View>
         <ScrollView style={styles.scroll}>
           <View style={styles.paddingRound}>
